@@ -1,18 +1,19 @@
-const variablesToToggleArray = ["--bg-color", "--text-color"];
-const themeNames = ["light", "dark", "color"];
+let htmlElement = document.querySelector("html");
+let selectThemeElement = document.querySelector(".theme-select");
 
-let root = document.documentElement;
-let themeSelect = document.querySelector(".theme-select");
-
-const setThemeMode = (mode) => {
-  variablesToToggleArray.forEach((el) => {
-    root.style.setProperty(el, `var(${el}-${mode})`);
-  });
-};
-
-themeSelect.addEventListener('change', () => {
-  let selectValue = themeSelect.value;
-  if(themeNames.includes(selectValue)){
-    setThemeMode(selectValue);
+const getDefultColorTheme = () => {
+  if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+    setColorTheme("dark");
+    selectThemeElement.value = "dark";
   }
+}
+
+const setColorTheme = (theme) => {
+  htmlElement.setAttribute('data-theme', theme)
+}
+
+selectThemeElement.addEventListener("change", () => {
+  setColorTheme(selectThemeElement.value);
 })
+
+getDefultColorTheme();

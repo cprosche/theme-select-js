@@ -1,15 +1,14 @@
-:root {
-  --bg-color-light: rgb(243, 243, 243);
-  --text-color-light: rgb(31, 31, 31);
-
-  --bg-color-dark: rgb(31, 31, 31);
-  --text-color-dark: rgb(243, 243, 243);
-
-  --bg-color-color: rgb(194, 255, 224);
-  --text-color-color: rgb(132, 0, 255);
-
-  --bg-color: var(--bg-color-light);
-  --text-color: var(--text-color-light);
+html{
+  --bg-color: rgb(243, 243, 243);
+  --text-color: rgb(31, 31, 31);
+}
+html[data-theme="dark"]{
+  --bg-color: rgb(31, 31, 31);
+  --text-color: rgb(243, 243, 243);
+}
+html[data-theme="color"]{
+  --bg-color: rgb(0, 17, 255);
+  --text-color: rgb(255, 217, 0);
 }
 
 * {
