@@ -10,6 +10,10 @@ html[data-theme="color"]{
   --bg-color: rgb(0, 17, 255);
   --text-color: rgb(255, 217, 0);
 }
+html[data-theme="christmas"]{
+  --bg-color: #165B33;
+  --text-color: #BB2528;
+}
 
 * {
   padding: 0;
