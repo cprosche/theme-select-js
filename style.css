@@ -1,0 +1,48 @@
+:root {
+  --bg-color-light: rgb(243, 243, 243);
+  --text-color-light: rgb(31, 31, 31);
+
+  --bg-color-dark: rgb(31, 31, 31);
+  --text-color-dark: rgb(243, 243, 243);
+
+  --bg-color-color: rgb(194, 255, 224);
+  --text-color-color: rgb(132, 0, 255);
+
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  transition: 70ms;
+}
+
+body {
+  height: 100vh;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 10px;
+}
+
+.theme-select {
+  font-size: 1.5rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 2px;
+}
